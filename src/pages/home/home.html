@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Todo List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+  <ion-content>
+    <ion-item-group>
+      <ion-item-divider class="header">
+        <div class="header"><h1>My Day</h1>
+        <p>{{myDate}} <ion-icon float-right name="sunny"></ion-icon></p>
+        </div>
+
+      </ion-item-divider>
+      <ion-item *ngFor="let item of globalArray;">
+        {{item.a1}}
+      </ion-item>
+
+
+      <ion-fab right bottom>
+        <button ion-fab (click)="addTask()"><ion-icon name="add"></ion-icon></button>
+      </ion-fab>
+
+    </ion-item-group>
+  </ion-content>
+
+
